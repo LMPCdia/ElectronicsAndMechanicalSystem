@@ -17,7 +17,9 @@ Si dos pistas de redes PWM o de alta frecuencia pasan una sobre la otra (en capa
 - Declarar en `layout.json`: `"hf_nets": ["PWM*", "CLK", ...]` y opcional `"hf_cross": {"modo": "ambas"|"alguna", "tol_grados": 2, "h": 0.6}`. `ambas` (por defecto) = solo cruces entre dos redes HF; `alguna` = cualquier cruce que involucre una red HF.
 - `make_pcb.py` la aplica sola después del ruteo: desvío local en S (sin esquinas de 90°) que cruza en perpendicular a lo largo de 2·h mm; cada desvío se valida con el DRC y se deshace si empeora.
 - Chequeo independiente: `python pcb/cross90.py placa.kicad_pcb layout.json` (sale 1 si hay cruces fuera de regla).
-- Límite: si el cruce cae sobre un chaflán o a menos de ~2 mm del extremo de un tramo no hay lugar para el desvío; queda listado como "sin resolver" para corregir a mano (o mover piezas y re-rutear).
+- El desvío puede recorrer varios tramos seguidos de la misma pista (chaflanes incluidos, sin pasar por pads ni vías), prueba distintos largos y anchos y hasta 12 alternativas, de la más suave a la menos, hasta que una pase el DRC.
+- Prueba exigente (RS232, 5 redes de datos como HF en modo `alguna`, misma placa ruteada): antes 1–4 de 8 cruces corregidos; ahora 6 de 8, 0 errores de DRC, 0 esquinas a 90°, ~30 s.
+- Límite: si el cruce está pegado a un pad (≈1 mm) no hay lugar físico para el desvío sin violar separaciones; queda listado como "sin resolver" para corregir a mano o separar esas piezas (`fijos`) y volver a rutear.
 
 ## Resultado de la prueba (RS232)
 - PCB regenerada desde la spec: 0 pistas sin conectar, 0 esquinas a 90°, redes idénticas a la spec (27/27), DRC igual que la placa hecha a mano (solo avisos de serigrafía y de biblioteca).

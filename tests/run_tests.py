@@ -76,6 +76,24 @@ def cruces_corrige_a_90():
     return "1 cruce corregido, PWM2 continua en %d tramos, sin esquinas a 90" % n
 
 @test
+def cruce_sobre_chaflan():
+    """el cruce cae en un chaflan de 1,7 mm: el desvio tiene que recorrer los tramos vecinos"""
+    b = pcbnew.LoadBoard(tablero_cruces(os.path.join(TMP, "chaflan.kicad_pcb")))
+    for t in [t for t in b.GetTracks() if str(t.GetNetname()) in ("PWM2", "PWM3", "SIG")]: b.Delete(t)
+    net = b.FindNet("PWM2")
+    pts = [(20, 5), (20, 19.4), (21.2, 20.6), (21.2, 35)]
+    for a, c in zip(pts, pts[1:]):
+        t = pcbnew.PCB_TRACK(b); t.SetStart(pcbnew.VECTOR2I(mm(a[0]), mm(a[1]))); t.SetEnd(pcbnew.VECTOR2I(mm(c[0]), mm(c[1])))
+        t.SetWidth(mm(0.25)); t.SetLayer(pcbnew.B_Cu); t.SetNet(net); b.Add(t)
+    hf = cross90.hf_matcher(["PWM*"])
+    assert len(cross90.crossings(b, hf)) == 1
+    done, pend = cross90.fix(b, hf, log=lambda *x: None)
+    assert done == 1 and not pend and cross90.crossings(b, hf) == [], pend
+    ok, n = _camino_ok(b, "PWM2", (20.0, 5.0), (21.2, 35.0)); assert ok, "PWM2 quedo cortada"
+    assert corner45.issues(corner45.load(b)) == []
+    return "cruce sobre chaflan corregido (%d tramos)" % n
+
+@test
 def esquema_desde_spec():
     out = os.path.join(TMP, "t.kicad_sch")
     subprocess.run([sys.executable, os.path.join(SK, "kicad_sch_builder.py"), os.path.join(EJ, "spec.py"), out], check=True, capture_output=True)
