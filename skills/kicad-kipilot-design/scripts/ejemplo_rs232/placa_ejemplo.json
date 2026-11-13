@@ -1,0 +1,1267 @@
+{
+ "unidades": "mm",
+ "origen": "esquina sup-izq del contorno",
+ "espesor_pcb": 1.6,
+ "contorno": {
+  "ancho": 110.1,
+  "alto": 74.1
+ },
+ "huellas": [
+  {
+   "ref": "C9",
+   "valor": "1uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    66.05,
+    39.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 64.185,
+    "y": 36.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 64.185,
+    "arriba": 36.775,
+    "der": 40.275,
+    "abajo": 31.775
+   }
+  },
+  {
+   "ref": "C6",
+   "valor": "100nF",
+   "huella": "C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "centro": [
+    66.05,
+    20.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 64.975,
+    "y": 18.525,
+    "ancho": 7.15,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P5.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 64.975,
+    "arriba": 18.525,
+    "der": 37.975,
+    "abajo": 52.525
+   }
+  },
+  {
+   "ref": "D4",
+   "valor": "LED datos",
+   "huella": "LED_D3.0mm",
+   "centro": [
+    74.05,
+    57.05
+   ],
+   "rot": 180.0,
+   "lado": "F",
+   "caja": {
+    "x": 70.325,
+    "y": 54.775,
+    "ancho": 4.9,
+    "alto": 4.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/LED_THT.3dshapes/LED_D3.0mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 70.325,
+    "arriba": 54.775,
+    "der": 34.875,
+    "abajo": 14.775
+   }
+  },
+  {
+   "ref": "D2",
+   "valor": "LED 5V",
+   "huella": "LED_D3.0mm",
+   "centro": [
+    76.05,
+    6.05
+   ],
+   "rot": 180.0,
+   "lado": "F",
+   "caja": {
+    "x": 72.325,
+    "y": 3.775,
+    "ancho": 4.9,
+    "alto": 4.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/LED_THT.3dshapes/LED_D3.0mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 72.325,
+    "arriba": 3.775,
+    "der": 32.875,
+    "abajo": 65.775
+   }
+  },
+  {
+   "ref": "JK2",
+   "valor": "Jack 5V al HF2211A",
+   "huella": "BarrelJack_Horizontal",
+   "centro": [
+    96.05,
+    60.05
+   ],
+   "rot": 90.0,
+   "lado": "F",
+   "caja": {
+    "x": 91.19,
+    "y": 58.025,
+    "ancho": 11.635,
+    "alto": 16.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 91.19,
+    "arriba": 58.025,
+    "der": 7.275,
+    "abajo": 0.025
+   }
+  },
+  {
+   "ref": "H2",
+   "valor": "M3",
+   "huella": "MountingHole_3.2mm_M3",
+   "centro": [
+    106.05,
+    4.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 102.575,
+    "y": 0.575,
+    "ancho": 6.95,
+    "alto": 6.95
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 102.575,
+    "arriba": 0.575,
+    "der": 0.575,
+    "abajo": 66.575
+   }
+  },
+  {
+   "ref": "R4",
+   "valor": "1k LED datos",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+   "centro": [
+    61.05,
+    57.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 59.975,
+    "y": 55.525,
+    "ancho": 9.77,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 59.975,
+    "arriba": 55.525,
+    "der": 40.355,
+    "abajo": 15.525
+   }
+  },
+  {
+   "ref": "H1",
+   "valor": "M3",
+   "huella": "MountingHole_3.2mm_M3",
+   "centro": [
+    4.05,
+    4.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 0.575,
+    "y": 0.575,
+    "ancho": 6.95,
+    "alto": 6.95
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 0.575,
+    "arriba": 0.575,
+    "der": 102.575,
+    "abajo": 66.575
+   }
+  },
+  {
+   "ref": "C11",
+   "valor": "100nF",
+   "huella": "C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "centro": [
+    42.05,
+    16.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 40.975,
+    "y": 15.025,
+    "ancho": 7.15,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P5.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 40.975,
+    "arriba": 15.025,
+    "der": 61.975,
+    "abajo": 56.025
+   }
+  },
+  {
+   "ref": "C12",
+   "valor": "100nF",
+   "huella": "C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "centro": [
+    62.35,
+    41.05
+   ],
+   "rot": -90.0,
+   "lado": "F",
+   "caja": {
+    "x": 60.825,
+    "y": 39.975,
+    "ancho": 3.05,
+    "alto": 7.15
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P5.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 60.825,
+    "arriba": 39.975,
+    "der": 46.225,
+    "abajo": 26.975
+   }
+  },
+  {
+   "ref": "TP5",
+   "valor": "RX_TTL",
+   "huella": "TestPoint_THTPad_D2.0mm_Drill1.0mm",
+   "centro": [
+    28.05,
+    48.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 26.525,
+    "y": 46.525,
+    "ancho": 3.05,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 26.525,
+    "arriba": 46.525,
+    "der": 80.525,
+    "abajo": 24.525
+   }
+  },
+  {
+   "ref": "C8",
+   "valor": "1uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    66.05,
+    33.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 64.185,
+    "y": 30.275,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 64.185,
+    "arriba": 30.275,
+    "der": 40.275,
+    "abajo": 38.275
+   }
+  },
+  {
+   "ref": "U4",
+   "valor": "6N137",
+   "huella": "DIP-8_W7.62mm_Socket",
+   "centro": [
+    51.24,
+    40.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 49.665,
+    "y": 38.425,
+    "ancho": 10.75,
+    "alto": 10.85
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-8_W7.62mm_Socket.wrl"
+   ],
+   "dist_borde": {
+    "izq": 49.665,
+    "arriba": 38.425,
+    "der": 49.685,
+    "abajo": 24.825
+   }
+  },
+  {
+   "ref": "U3",
+   "valor": "74HC04",
+   "huella": "DIP-14_W7.62mm_Socket",
+   "centro": [
+    40.05,
+    22.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 38.475,
+    "y": 20.425,
+    "ancho": 10.75,
+    "alto": 18.5
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-14_W7.62mm_Socket.wrl"
+   ],
+   "dist_borde": {
+    "izq": 38.475,
+    "arriba": 20.425,
+    "der": 60.875,
+    "abajo": 35.175
+   }
+  },
+  {
+   "ref": "C14",
+   "valor": "10uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    58.05,
+    67.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 56.185,
+    "y": 64.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 56.185,
+    "arriba": 64.775,
+    "der": 48.275,
+    "abajo": 3.775
+   }
+  },
+  {
+   "ref": "F1",
+   "valor": "PTC 50mA/100mA",
+   "huella": "Fuse_Bourns_MF-RG300",
+   "centro": [
+    22.05,
+    19.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 20.775,
+    "y": 17.875,
+    "ancho": 7.65,
+    "alto": 3.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Fuse.3dshapes/Fuse_Bourns_MF-RG300.wrl"
+   ],
+   "dist_borde": {
+    "izq": 20.775,
+    "arriba": 17.875,
+    "der": 81.675,
+    "abajo": 52.675
+   }
+  },
+  {
+   "ref": "TP6",
+   "valor": "OPTO_OUT",
+   "huella": "TestPoint_THTPad_D2.0mm_Drill1.0mm",
+   "centro": [
+    68.05,
+    45.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 66.525,
+    "y": 43.525,
+    "ancho": 3.05,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 66.525,
+    "arriba": 43.525,
+    "der": 40.525,
+    "abajo": 27.525
+   }
+  },
+  {
+   "ref": "C13",
+   "valor": "10uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    70.05,
+    67.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 68.185,
+    "y": 64.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 68.185,
+    "arriba": 64.775,
+    "der": 36.275,
+    "abajo": 3.775
+   }
+  },
+  {
+   "ref": "DC1",
+   "valor": "B0505S-1WR2",
+   "huella": "PinHeader_1x04_P2.54mm_Vertical",
+   "centro": [
+    58.86,
+    62.05
+   ],
+   "rot": -90.0,
+   "lado": "F",
+   "caja": {
+    "x": 49.435,
+    "y": 60.225,
+    "ancho": 11.25,
+    "alto": 3.65
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.wrl"
+   ],
+   "dist_borde": {
+    "izq": 49.435,
+    "arriba": 60.225,
+    "der": 49.415,
+    "abajo": 10.225
+   }
+  },
+  {
+   "ref": "H3",
+   "valor": "M3",
+   "huella": "MountingHole_3.2mm_M3",
+   "centro": [
+    4.05,
+    70.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 0.575,
+    "y": 66.575,
+    "ancho": 6.95,
+    "alto": 6.95
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 0.575,
+    "arriba": 66.575,
+    "der": 102.575,
+    "abajo": 0.575
+   }
+  },
+  {
+   "ref": "R5",
+   "valor": "680R",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+   "centro": [
+    60.05,
+    6.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 58.975,
+    "y": 4.525,
+    "ancho": 9.77,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 58.975,
+    "arriba": 4.525,
+    "der": 41.355,
+    "abajo": 66.525
+   }
+  },
+  {
+   "ref": "H4",
+   "valor": "M3",
+   "huella": "MountingHole_3.2mm_M3",
+   "centro": [
+    106.05,
+    70.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 102.575,
+    "y": 66.575,
+    "ancho": 6.95,
+    "alto": 6.95
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 102.575,
+    "arriba": 66.575,
+    "der": 0.575,
+    "abajo": 0.575
+   }
+  },
+  {
+   "ref": "TP1",
+   "valor": "5V_HF",
+   "huella": "TestPoint_THTPad_D2.0mm_Drill1.0mm",
+   "centro": [
+    63.05,
+    71.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 61.525,
+    "y": 69.525,
+    "ancho": 3.05,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 61.525,
+    "arriba": 69.525,
+    "der": 45.525,
+    "abajo": 1.525
+   }
+  },
+  {
+   "ref": "C1",
+   "valor": "100nF",
+   "huella": "C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "centro": [
+    14.05,
+    26.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 12.975,
+    "y": 24.525,
+    "ancho": 7.15,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P5.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 12.975,
+    "arriba": 24.525,
+    "der": 89.975,
+    "abajo": 46.525
+   }
+  },
+  {
+   "ref": "R7",
+   "valor": "330R carga min.",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "centro": [
+    16.05,
+    64.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 14.975,
+    "y": 62.525,
+    "ancho": 12.31,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 14.975,
+    "arriba": 62.525,
+    "der": 82.815,
+    "abajo": 8.525
+   }
+  },
+  {
+   "ref": "C2",
+   "valor": "1uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    14.05,
+    32.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 12.185,
+    "y": 29.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 12.185,
+    "arriba": 29.775,
+    "der": 92.275,
+    "abajo": 38.775
+   }
+  },
+  {
+   "ref": "J1",
+   "valor": "DB9 hembra (equipo)",
+   "huella": "DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm",
+   "centro": [
+    7.75,
+    42.59
+   ],
+   "rot": -90.0,
+   "lado": "F",
+   "caja": {
+    "x": -9.925,
+    "y": 21.065,
+    "ancho": 20.489,
+    "alto": 31.95
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Connector_Dsub.3dshapes/DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": -9.925,
+    "arriba": 21.065,
+    "der": 99.536,
+    "abajo": 21.085
+   }
+  },
+  {
+   "ref": "R2",
+   "valor": "330R",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "centro": [
+    38.05,
+    41.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 36.975,
+    "y": 39.525,
+    "ancho": 12.31,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 36.975,
+    "arriba": 39.525,
+    "der": 60.815,
+    "abajo": 31.525
+   }
+  },
+  {
+   "ref": "R1",
+   "valor": "100R",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "centro": [
+    20.05,
+    13.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 18.975,
+    "y": 12.025,
+    "ancho": 12.31,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 18.975,
+    "arriba": 12.025,
+    "der": 78.815,
+    "abajo": 59.025
+   }
+  },
+  {
+   "ref": "C3",
+   "valor": "1uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    14.05,
+    39.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 12.185,
+    "y": 36.275,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 12.185,
+    "arriba": 36.275,
+    "der": 92.275,
+    "abajo": 32.275
+   }
+  },
+  {
+   "ref": "D3",
+   "valor": "LED 5V aislado",
+   "huella": "LED_D3.0mm",
+   "centro": [
+    32.05,
+    58.05
+   ],
+   "rot": 180.0,
+   "lado": "F",
+   "caja": {
+    "x": 28.325,
+    "y": 55.775,
+    "ancho": 4.9,
+    "alto": 4.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/LED_THT.3dshapes/LED_D3.0mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 28.325,
+    "arriba": 55.775,
+    "der": 76.875,
+    "abajo": 13.775
+   }
+  },
+  {
+   "ref": "R6",
+   "valor": "680R",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "centro": [
+    16.05,
+    58.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 14.975,
+    "y": 56.525,
+    "ancho": 12.31,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 14.975,
+    "arriba": 56.525,
+    "der": 82.815,
+    "abajo": 14.525
+   }
+  },
+  {
+   "ref": "C5",
+   "valor": "100nF",
+   "huella": "C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "centro": [
+    30.05,
+    16.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 28.975,
+    "y": 15.025,
+    "ancho": 7.15,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P5.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 28.975,
+    "arriba": 15.025,
+    "der": 73.975,
+    "abajo": 56.025
+   }
+  },
+  {
+   "ref": "U2",
+   "valor": "MAX3232CPE",
+   "huella": "DIP-16_W7.62mm_Socket",
+   "centro": [
+    76.05,
+    20.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 74.475,
+    "y": 18.425,
+    "ancho": 10.75,
+    "alto": 21.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-16_W7.62mm_Socket.wrl"
+   ],
+   "dist_borde": {
+    "izq": 74.475,
+    "arriba": 18.425,
+    "der": 24.875,
+    "abajo": 34.625
+   }
+  },
+  {
+   "ref": "C4",
+   "valor": "1uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    14.05,
+    45.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 12.185,
+    "y": 42.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 12.185,
+    "arriba": 42.775,
+    "der": 92.275,
+    "abajo": 25.775
+   }
+  },
+  {
+   "ref": "U1",
+   "valor": "MAX3232CPE",
+   "huella": "DIP-16_W7.62mm_Socket",
+   "centro": [
+    24.05,
+    24.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 22.475,
+    "y": 22.425,
+    "ancho": 10.75,
+    "alto": 21.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Package_DIP.3dshapes/DIP-16_W7.62mm_Socket.wrl"
+   ],
+   "dist_borde": {
+    "izq": 22.475,
+    "arriba": 22.425,
+    "der": 76.875,
+    "abajo": 30.625
+   }
+  },
+  {
+   "ref": "C7",
+   "valor": "1uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    66.05,
+    26.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 64.185,
+    "y": 23.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 64.185,
+    "arriba": 23.775,
+    "der": 40.275,
+    "abajo": 44.775
+   }
+  },
+  {
+   "ref": "JK1",
+   "valor": "Jack 5V entrada",
+   "huella": "BarrelJack_Horizontal",
+   "centro": [
+    82.05,
+    60.05
+   ],
+   "rot": 90.0,
+   "lado": "F",
+   "caja": {
+    "x": 77.19,
+    "y": 58.025,
+    "ancho": 11.635,
+    "alto": 16.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 77.19,
+    "arriba": 58.025,
+    "der": 21.275,
+    "abajo": 0.025
+   }
+  },
+  {
+   "ref": "TP2",
+   "valor": "GND_HF",
+   "huella": "TestPoint_THTPad_D2.0mm_Drill1.0mm",
+   "centro": [
+    66.55,
+    71.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 65.025,
+    "y": 69.525,
+    "ancho": 3.05,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 65.025,
+    "arriba": 69.525,
+    "der": 42.025,
+    "abajo": 1.525
+   }
+  },
+  {
+   "ref": "D1",
+   "valor": "P6KE15CA",
+   "huella": "D_DO-15_P12.70mm_Horizontal",
+   "centro": [
+    20.05,
+    8.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 18.575,
+    "y": 5.975,
+    "ancho": 15.65,
+    "alto": 4.15
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Diode_THT.3dshapes/D_DO-15_P12.70mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 18.575,
+    "arriba": 5.975,
+    "der": 75.875,
+    "abajo": 63.975
+   }
+  },
+  {
+   "ref": "J2",
+   "valor": "DB9 hacia HF2211A",
+   "huella": "DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm",
+   "centro": [
+    102.35,
+    42.59
+   ],
+   "rot": 90.0,
+   "lado": "F",
+   "caja": {
+    "x": 99.536,
+    "y": 21.065,
+    "ancho": 20.289,
+    "alto": 31.95
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Connector_Dsub.3dshapes/DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 99.536,
+    "arriba": 21.065,
+    "der": -9.725,
+    "abajo": 21.085
+   }
+  },
+  {
+   "ref": "C10",
+   "valor": "100nF",
+   "huella": "C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "centro": [
+    86.05,
+    14.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 84.975,
+    "y": 12.525,
+    "ancho": 7.15,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P5.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 84.975,
+    "arriba": 12.525,
+    "der": 17.975,
+    "abajo": 58.525
+   }
+  },
+  {
+   "ref": "R3",
+   "valor": "1k pull-up",
+   "huella": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+   "centro": [
+    62.05,
+    52.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 60.975,
+    "y": 50.525,
+    "ancho": 12.31,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl"
+   ],
+   "dist_borde": {
+    "izq": 60.975,
+    "arriba": 50.525,
+    "der": 36.815,
+    "abajo": 20.525
+   }
+  },
+  {
+   "ref": "TP4",
+   "valor": "GND_ISO",
+   "huella": "TestPoint_THTPad_D2.0mm_Drill1.0mm",
+   "centro": [
+    8.05,
+    62.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 6.525,
+    "y": 60.525,
+    "ancho": 3.05,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 6.525,
+    "arriba": 60.525,
+    "der": 100.525,
+    "abajo": 10.525
+   }
+  },
+  {
+   "ref": "TP3",
+   "valor": "VISO",
+   "huella": "TestPoint_THTPad_D2.0mm_Drill1.0mm",
+   "centro": [
+    8.05,
+    56.05
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 6.525,
+    "y": 54.525,
+    "ancho": 3.05,
+    "alto": 3.05
+   },
+   "altura_mm": null,
+   "modelo_3d": [],
+   "dist_borde": {
+    "izq": 6.525,
+    "arriba": 54.525,
+    "der": 100.525,
+    "abajo": 16.525
+   }
+  },
+  {
+   "ref": "C15",
+   "valor": "10uF",
+   "huella": "CP_Radial_D5.0mm_P2.00mm",
+   "centro": [
+    44.05,
+    67.55
+   ],
+   "rot": 0.0,
+   "lado": "F",
+   "caja": {
+    "x": 42.185,
+    "y": 64.775,
+    "ancho": 5.64,
+    "alto": 5.55
+   },
+   "altura_mm": null,
+   "modelo_3d": [
+    "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D5.0mm_P2.00mm.wrl"
+   ],
+   "dist_borde": {
+    "izq": 42.185,
+    "arriba": 64.775,
+    "der": 62.275,
+    "abajo": 3.775
+   }
+  }
+ ],
+ "agujeros_montaje": [
+  {
+   "ref": "H2",
+   "centro": [
+    106.05,
+    4.05
+   ],
+   "diam_taladro": 3.2
+  },
+  {
+   "ref": "H1",
+   "centro": [
+    4.05,
+    4.05
+   ],
+   "diam_taladro": 3.2
+  },
+  {
+   "ref": "H3",
+   "centro": [
+    4.05,
+    70.05
+   ],
+   "diam_taladro": 3.2
+  },
+  {
+   "ref": "H4",
+   "centro": [
+    106.05,
+    70.05
+   ],
+   "diam_taladro": 3.2
+  }
+ ]
+}

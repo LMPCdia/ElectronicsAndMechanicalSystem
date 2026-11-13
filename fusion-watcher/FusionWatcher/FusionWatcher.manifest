@@ -1,0 +1,11 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "addin",
+  "id": "b7a4c6a0-5f1e-4a52-9a73-0e6d1f0a1c11",
+  "author": "Lautaro Morel Penco",
+  "description": {"": "Importa a Fusion los STEP nuevos de una carpeta vigilada"},
+  "version": "0.1.0",
+  "runOnStartup": false,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

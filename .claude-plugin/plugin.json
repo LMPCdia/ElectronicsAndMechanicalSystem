@@ -1,0 +1,6 @@
+{
+  "name": "equipo-ingenieria",
+  "version": "0.1.0",
+  "description": "Equipo de ingeniería con agentes (director, electrónica, mecánica, validación, prototipado) que entrevista al usuario y lleva un producto desde la idea hasta placa KiCad, caja en Fusion y prototipo impreso.",
+  "author": {"name": "Lautaro Morel Penco"}
+}
