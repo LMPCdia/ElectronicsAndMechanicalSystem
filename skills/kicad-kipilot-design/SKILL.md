@@ -57,6 +57,7 @@ Si una función no está disponible, completar las etapas independientes y expli
 | `scripts/netlist_check.py` | Compara las redes del esquemático generado con la spec usando `kicad-cli` (consistencia, no ERC) |
 | `scripts/audit_3d_models.py` | Lista huellas sin modelo 3D y modelos genéricos a revisar |
 | `scripts/pcb/make_pcb.py` (+ `pcb_build.py`, `pcb_route.py`, `corner45.py`) | Spec + `layout.json` → PCB con ruteo Freerouting, planos y chaflanes de 45° (nunca 90°) |
+| `scripts/pcb/autoplace.py` | Colocación automática: spec + `reglas.json` (placa, conectores al borde, barrera, masas) → `layout.json` + vista PNG; `make_pcb.py` la usa sola si el JSON no trae `pos` |
 | `scripts/pcb/cross90.py` | Regla: cruces entre capas de redes PWM/alta frecuencia (`hf_nets` en `layout.json`) a 90°; chequeo y corrección automática |
 | `scripts/gen_enclosure.py` | JSON de la placa → base y tapa paramétricas (STEP/STL, CadQuery) con ventanas, postes y agujeros de LED |
 | `scripts/board_to_enclosure_json.py` | Exporta contorno, agujeros y posición/caja de cada huella para diseñar caja y soportes |

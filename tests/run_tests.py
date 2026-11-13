@@ -123,6 +123,44 @@ def caja_desde_json():
     for r in ("J1", "J2", "JK1", "JK2"): assert r + ":" in rep, "falta ventana " + r
     return "base y tapa validas, 4 ventanas"
 
+@test
+def colocacion_automatica():
+    import autoplace
+    R = json.load(open(os.path.join(EJ, "reglas.json")))
+    L, P, malos = autoplace.colocar(spec(), R, seed=1, log=lambda *x: None)
+    assert not malos, "piezas con choques: %s" % malos
+    assert set(L["pos"]) == set(P) and len(P) == 42
+    W, H = R["board"]["w"], R["board"]["h"]
+    assert abs(L["pos"]["J1"][0] - 7.7) < 0.01 and abs(L["pos"]["J2"][0] - (W - 7.7)) < 0.01, "DB9 no quedaron al borde"
+    for r in ("JK1", "JK2"): assert abs(P[r].box()[3] - H) < 0.01, r + " no quedo al borde inferior"
+    XB = R["barrera"]["x"]
+    for p in P.values():                                     # cada pieza en su lado, nada pisa la franja salvo puentes
+        b = p.box()
+        if p.lado == "izq": assert b[2] <= XB - 2.4, p.ref
+        if p.lado == "der": assert b[0] >= XB + 2.4, p.ref
+    assert P["U4"].lado == P["DC1"].lado == "puente"
+    for num, x, y in P["U4"].pads():                         # opto: LED (iso) a la izquierda, salida (hf) a la derecha
+        n = P["U4"].nets.get(num)
+        if n in ("LED_A", "GND_ISO"): assert x < XB, (num, n)
+        if n in ("5V_HF", "GND_HF", "OPTO_OUT"): assert x > XB, (num, n)
+    return "42 piezas sin choques, conectores al borde, U4/DC1 sobre la barrera bien orientados"
+
+@test
+def colocacion_y_ruteo_automaticos():
+    if "--rapido" in sys.argv: return "skip"
+    jar = os.environ.get("FREEROUTING_JAR", "")
+    if not os.path.exists(jar): return "skip"
+    out = os.path.join(TMP, "auto")
+    r = subprocess.run([sys.executable, os.path.join(PCB, "make_pcb.py"), os.path.join(EJ, "spec.py"), os.path.join(EJ, "reglas.json"), out, "--jar", jar],
+                       capture_output=True, text=True)
+    assert r.returncode == 0, r.stdout[-800:] + r.stderr[-800:]
+    b = pcbnew.LoadBoard(os.path.join(out, "placa.kicad_pcb"))
+    assert corner45.issues(corner45.load(b)) == []
+    f = os.path.join(TMP, "drc_auto.rpt"); pcbnew.ZONE_FILLER(b).Fill(b.Zones()); pcbnew.WriteDRCReport(b, f, pcbnew.EDA_UNITS_MILLIMETRES, True)
+    txt = open(f).read(); assert "Found 0 unconnected pads" in txt
+    for k in ("[clearance]", "[shorting_items]", "[tracks_crossing]", "[copper_edge_clearance]"): assert k not in txt, k
+    return "placa sin posiciones manuales: 0 sin conectar, 0 errores de cobre, 0 esquinas 90"
+
 print("\n=== Resultados ===")
 for n, st, d in RES: print("%-32s %-9s %s" % (n, st, d))
 sys.exit(1 if any(st == "FALLA" for _, st, _ in RES) else 0)

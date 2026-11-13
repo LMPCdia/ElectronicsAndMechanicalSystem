@@ -19,7 +19,7 @@ Secciones: Objetivo · Requisitos (numerados R1…) · Restricciones · Supuesto
 
 ## 3. Plan por etapas (confirmar con el usuario antes de ejecutar)
 1. Arquitectura y lista de materiales → agente `ingeniero-electronico`.
-2. Esquema y PCB (KiCad) → mismo agente, con la skill `kicad-kipilot-design` (spec → esquema → layout.json → PCB 45°).
+2. Esquema y PCB (KiCad) → mismo agente, con la skill `kicad-kipilot-design` (spec → esquema → reglas.json → colocación y ruteo automáticos → PCB 45°). El usuario aprueba la vista de colocación.
 3. Caja y soportes → agente `ingeniero-mecanico` (skill `mecanica-fusion`).
 4. Revisión cruzada → agente `revisor`.
 5. Prototipo y pruebas → agente `prototipado`.

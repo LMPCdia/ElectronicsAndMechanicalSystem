@@ -4,10 +4,13 @@ Cadena probada con la interfaz RS232 aislada (46 huellas, 27 redes). Todo corre 
 
 ## Pasos
 1. **spec.py** (PARTS, FOOT, HEADERS, NOTES): fuente única. `kicad_sch_builder.py spec.py PlacaX.kicad_sch` → esquema. `netlist_check.py` → redes coherentes.
-2. **layout.json** (ver `ejemplo_rs232/layout.json`): contorno (`w,h,chamfer`), `pos` `[x,y,rot]` por referencia (todas las de la spec), `holes`, `texts`, `route` (ancho, separación, clase de potencia, vía), `keepouts` (franja sin cobre, p. ej. barrera de aislación) y `zones` (planos de masa).
-3. `pcb/make_pcb.py spec.py layout.json salida/ --jar freerouting.jar` → `placa.kicad_pcb`: huellas con `path` al símbolo (no duplica al "Actualizar PCB desde esquemático"), ruteo Freerouting, planos, y **todas las esquinas/T a 90° convertidas en chaflán de 45°**. Redes con prefijo `/` como el esquema.
-4. `board_to_enclosure_json.py placa.kicad_pcb placa.json` → datos mecánicos.
-5. `gen_enclosure.py placa.json carpeta [config.json]` → `base`/`tapa` en STEP y STL + `caja_reporte.md`. Parámetros en `config.json` (pared, piso, holgura, poste_alto, tapa_esp, borde_max, led_d, sin_ventana…).
+2. **Colocación automática (recomendada):** `reglas.json` (ver `ejemplo_rs232/reglas.json`): tamaño de placa, `bordes` (conectores que salen por un borde; DSUB y BarrelJack se orientan solos, otros con `rot_borde`), `fijos`, `barrera` (x, ancho, bloque de la spec de cada lado), `gnd` por lado, `route`, `hf_nets`. `make_pcb.py spec.py reglas.json salida/` coloca (recocido simulado: mínima longitud de conexiones, sin solapar courtyards, cada pieza del lado de sus redes, piezas puente sobre la barrera con cada pad de su lado), rutea y reintenta con otra semilla si el ruteo no cierra. Mostrar `vista_colocacion.png` al usuario antes de seguir.
+   - Prueba RS232 sin posiciones manuales: 42 piezas sin choques, 0 pads sin conectar, 0 errores de cobre, 0 esquinas a 90°, sin vías.
+   - Límites: no conoce la mecánica (alturas, disipación térmica, LEDs que tienen que verse por la tapa): fijar esas piezas con `fijos`.
+3. **layout.json manual** (alternativa) (ver `ejemplo_rs232/layout.json`): contorno (`w,h,chamfer`), `pos` `[x,y,rot]` por referencia (todas las de la spec), `holes`, `texts`, `route` (ancho, separación, clase de potencia, vía), `keepouts` (franja sin cobre, p. ej. barrera de aislación) y `zones` (planos de masa).
+4. `pcb/make_pcb.py spec.py layout.json salida/ --jar freerouting.jar` → `placa.kicad_pcb`: huellas con `path` al símbolo (no duplica al "Actualizar PCB desde esquemático"), ruteo Freerouting, planos, y **todas las esquinas/T a 90° convertidas en chaflán de 45°**. Redes con prefijo `/` como el esquema.
+5. `board_to_enclosure_json.py placa.kicad_pcb placa.json` → datos mecánicos.
+6. `gen_enclosure.py placa.json carpeta [config.json]` → `base`/`tapa` en STEP y STL + `caja_reporte.md`. Parámetros en `config.json` (pared, piso, holgura, poste_alto, tapa_esp, borde_max, led_d, sin_ventana…).
 
 ## Regla de cruces PWM / alta frecuencia (90° entre capas)
 Si dos pistas de redes PWM o de alta frecuencia pasan una sobre la otra (en capas distintas), el cruce tiene que ser a **90°** para minimizar el acoplamiento. Es complementaria a la regla de esquinas: dentro de una misma pista nunca 90° (chaflán 45°); entre pistas que se cruzan en capas distintas, siempre 90°.

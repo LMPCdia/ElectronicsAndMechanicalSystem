@@ -108,6 +108,7 @@ def _undo(b, new, orig):
     S, E, w, lay, net = orig
     t = pcbnew.PCB_TRACK(b); t.SetStart(pcbnew.VECTOR2I(mm(S[0]), mm(S[1]))); t.SetEnd(pcbnew.VECTOR2I(mm(E[0]), mm(E[1])))
     t.SetWidth(w); t.SetLayer(lay); t.SetNet(net); b.Add(t)
+    return t                                # la pista original recreada (el objeto viejo ya no existe)
 
 def fix(b, is_hf, modo="ambas", tol=2.0, h=0.6, log=print):
     base = drc_count(b); done, pend = 0, []
@@ -115,14 +116,15 @@ def fix(b, is_hf, modo="ambas", tol=2.0, h=0.6, log=print):
         cs = [c for c in crossings(b, is_hf, modo, tol) if not any(math.hypot(c["P"][0] - p[0], c["P"][1] - p[1]) < 0.01 for p, _, _ in pend)]
         if not cs: break
         c = cs[0]; ok = False
-        for mover, fixed in ((c["b"], c["a"]), (c["a"], c["b"])):
+        tr = {"a": c["a"], "b": c["b"]}
+        for km, kf in (("b", "a"), ("a", "b")):
             for hh in (h, h * 0.7, h * 0.5, h * 1.5):
-                r = _jog(b, mover, fixed, c["P"], hh)
+                r = _jog(b, tr[km], tr[kf], c["P"], hh)
                 if not r: continue
                 now = drc_count(b)
                 if now <= base:
                     ok = True; base = now; break
-                _undo(b, *r)
+                tr[km] = _undo(b, *r)              # seguir con la pista recreada, no con la borrada
             if ok: break
         if ok: done += 1
         else: pend.append((c["P"], c["nets"], round(c["ang"], 1)))

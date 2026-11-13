@@ -1,0 +1,7 @@
+{"board": {"w": 110, "h": 74, "chamfer": 3},
+ "agujeros": {"inset": 4},
+ "bordes": {"J1": "izq", "J2": "der", "JK1": "abajo", "JK2": "abajo"},
+ "barrera": {"x": 55, "ancho": 4.8, "izq": "iso", "der": "hf"},
+ "gnd": {"iso": "GND_ISO", "hf": "GND_HF"},
+ "route": {"width": 0.25, "clearance": 0.25, "power_width": 0.4, "power_nets": ["5V_HF", "VISO", "GND_HF", "GND_ISO"], "via": [0.6, 0.3]},
+ "texts": [["RS232 aislada p/ HF2211A - colocacion automatica", 55, 71.6, 1.0, 0, null]]}

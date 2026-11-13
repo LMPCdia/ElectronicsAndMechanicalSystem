@@ -1,0 +1,14 @@
+{
+  "name": "lmpc-ingenieria",
+  "owner": {
+    "name": "Lautaro Morel Penco"
+  },
+  "plugins": [
+    {
+      "name": "equipo-ingenieria",
+      "source": "./",
+      "description": "Equipo de agentes de ingeniería: de la idea a placa KiCad, caja en Fusion y prototipo."
+    }
+  ],
+  "description": "Plugins de ingeniería electrónica y mecánica de Lautaro Morel Penco (KiCad, Fusion, prototipado)."
+}
