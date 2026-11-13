@@ -4,3 +4,4 @@ __pycache__/
 *-backups/
 fp-info-cache
 *.tar.gz
+logs/
