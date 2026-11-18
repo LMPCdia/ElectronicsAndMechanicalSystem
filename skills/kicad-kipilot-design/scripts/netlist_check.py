@@ -6,7 +6,7 @@ Esto es una comprobacion de consistencia de lo generado; no reemplaza ERC/DRC (q
 import sys, os, re, glob, shutil, subprocess, tempfile, importlib.util
 import xml.etree.ElementTree as ET
 def cli():
-    for c in [os.environ.get("KICAD_CLI"), shutil.which("kicad-cli")] + sorted(glob.glob(r"C:\Program Files\KiCad\*\bin\kicad-cli.exe"), reverse=True):
+    for c in [os.environ.get("KICAD_CLI"), shutil.which("kicad-cli")] + sorted(glob.glob(r"C:\Program Files\KiCad\*\bin\kicad-cli.exe"), key=lambda d: [int(x) for x in re.findall(r"\d+", d.split("KiCad")[1].split("\\")[1])], reverse=True):
         if c and os.path.exists(c): return c
     raise SystemExit("kicad-cli no encontrado: defini KICAD_CLI")
 sch, spec = sys.argv[1], sys.argv[2]

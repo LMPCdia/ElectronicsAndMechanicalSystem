@@ -76,7 +76,9 @@ foreach ($d in @(@("fusion-watcher\FusionWatcher", "FusionWatcher"), @("fusion-m
     if (Test-Path (Join-Path $dst ($d[1] + ".py"))) { Ok "$($d[1]) ya esta en AddIns" }
     else { Copy-Item -Recurse -Force (Join-Path $Repo $d[0]) $dst; Ok "$($d[1]) copiado" }
 }
-$kicad = Get-ChildItem "C:\Program Files\KiCad\*\bin\python.exe" -ErrorAction SilentlyContinue | Sort-Object FullName -Descending | Select-Object -First 1
+$kicad = Get-ChildItem "C:\Program Files\KiCad\*\bin\python.exe" -ErrorAction SilentlyContinue |
+    Sort-Object { $v = ($_.Directory.Parent.Name -split '\.') + @('0', '0'); [int]($v[0] -replace '\D', '') * 1000 + [int]($v[1] -replace '\D', '') } -Descending |
+    Select-Object -First 1
 if ($kicad) { Ok "Python de KiCad: $($kicad.FullName)" } else { Aviso "no encontre el Python de KiCad en C:\Program Files\KiCad" }
 
 Write-Host "`nListo. Falta solo en Fusion: Utilidades > Scripts y complementos > Complementos > ejecutar FusionWatcher y Fusion360MCP (tilda 'Ejecutar al iniciar')." -ForegroundColor Cyan

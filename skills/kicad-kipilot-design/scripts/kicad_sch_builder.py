@@ -17,7 +17,7 @@ import re, sys, uuid, math, datetime
 import os, glob
 def _find_libdir():
     c = [os.environ.get("KICAD_SYMBOL_DIR", "")]
-    c += sorted(glob.glob(r"C:\Program Files\KiCad\*\share\kicad\symbols"), reverse=True)
+    c += sorted(glob.glob(r"C:\Program Files\KiCad\*\share\kicad\symbols"), key=lambda d: [int(x) for x in re.findall(r"\d+", d.split("KiCad")[1].split("\\")[1])], reverse=True)
     c += ["/usr/share/kicad/symbols", "/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols"]
     for d in c:
         if d and os.path.isdir(d): return d.rstrip("/\\") + os.sep

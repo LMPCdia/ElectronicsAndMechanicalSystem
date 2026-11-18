@@ -8,14 +8,14 @@ layout.json:
   "texts": [["TEXTO", x, y, tamano, rot, "L"|null], ...]}
 Cada huella queda con su 'path' apuntando al simbolo del esquematico (UUID estable), para que
 'Actualizar PCB desde esquematico' no duplique piezas. Probado con KiCad 7.0 (pcbnew)."""
-import sys, os, glob, json, importlib.util
+import re, sys, os, glob, json, importlib.util
 import pcbnew
 from pcbnew import FromMM as mm
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.dirname(HERE))
 from kicad_sch_builder import uid
 
 def fp_dir():
-    for d in [os.environ.get("KICAD_FOOTPRINT_DIR", "")] + sorted(glob.glob(r"C:\Program Files\KiCad\*\share\kicad\footprints"), reverse=True) \
+    for d in [os.environ.get("KICAD_FOOTPRINT_DIR", "")] + sorted(glob.glob(r"C:\Program Files\KiCad\*\share\kicad\footprints"), key=lambda d: [int(x) for x in re.findall(r"\d+", d.split("KiCad")[1].split("\\")[1])], reverse=True) \
             + ["/usr/share/kicad/footprints", "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints"]:
         if d and os.path.isdir(d): return d.rstrip("/\\") + os.sep
     raise SystemExit("Defini KICAD_FOOTPRINT_DIR (carpeta con los .pretty)")

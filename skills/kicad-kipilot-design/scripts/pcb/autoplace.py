@@ -27,7 +27,7 @@ FAMILIAS = {        # direccion hacia donde "mira" el conector con rot 0
 DIRS = {"izq": (-1, 0), "der": (1, 0), "arriba": (0, -1), "abajo": (0, 1)}
 
 def fp_dir():
-    for d in [os.environ.get("KICAD_FOOTPRINT_DIR", "")] + sorted(glob.glob(r"C:\Program Files\KiCad\*\share\kicad\footprints"), reverse=True) \
+    for d in [os.environ.get("KICAD_FOOTPRINT_DIR", "")] + sorted(glob.glob(r"C:\Program Files\KiCad\*\share\kicad\footprints"), key=lambda d: [int(x) for x in re.findall(r"\d+", d.split("KiCad")[1].split("\\")[1])], reverse=True) \
             + ["/usr/share/kicad/footprints", "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints"]:
         if d and os.path.isdir(d): return d.rstrip("/\\") + os.sep
     raise SystemExit("Defini KICAD_FOOTPRINT_DIR")
